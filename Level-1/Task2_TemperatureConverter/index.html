@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelvin · Celsius · Fahrenheit | Precision Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="glass-card">
+      <div class="brand">
+        <div class="brand-icon">🌡️</div>
+        <div class="brand-text">
+          <h1>Thermo<span>Shift</span></h1>
+          <p>Fast · Accurate · Multi-Unit Converter</p>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="field">
+          <label for="temp">value</label>
+          <div class="input-wrapper">
+            <input type="number" id="temp" placeholder="0" step="any" autofocus>
+            <span id="inputUnitBadge">°C</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>from scale</label>
+          <div class="scale-selector">
+            <div class="scale-option active" data-unit="C">°C</div>
+            <div class="scale-option" data-unit="F">°F</div>
+            <div class="scale-option" data-unit="K">K</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="convertBtn">
+        <span>→</span> convert <span>←</span>
+      </button>
+
+      <div class="result-grid">
+        <div class="result-card" id="celsiusCard">
+          <div class="result-label">celsius</div>
+          <div class="result-flex">
+            <span class="result-number" id="celsiusVal">0.00</span>
+            <span class="result-unit">°C</span>
+          </div>
+        </div>
+        <div class="result-card" id="fahrenheitCard">
+          <div class="result-label">fahrenheit</div>
+          <div class="result-flex">
+            <span class="result-number" id="fahrenheitVal">32.00</span>
+            <span class="result-unit">°F</span>
+          </div>
+        </div>
+        <div class="result-card" id="kelvinCard">
+          <div class="result-label">kelvin</div>
+          <div class="result-flex">
+            <span class="result-number" id="kelvinVal">273.15</span>
+            <span class="result-unit">K</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="errorContainer" class="error-hidden">
+        <div class="error-content">
+          <span>⚠️</span>
+          <span id="errorMessage">invalid input</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
